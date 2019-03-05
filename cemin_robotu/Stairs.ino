@@ -2,12 +2,12 @@ void stepUp(){
   stopAllWheels();
   setFrontServo(90);
   setBackServo(20);
-  setFrontWheels(100,100); setTailWheels(100,100);
+  setMotors('f',100,100); setMotors('t',100,100);
   delay(1000);
   stopAllWheels();
   setBackServo(180);
-  setFrontWheels(100,100); setBackWheels(100,100);
-  delay(100);
+  setMotors('b',100,100);setMotors('b',100,100);
+  delay(1000);
   setFrontServo(90);
 }
 

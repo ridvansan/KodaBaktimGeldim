@@ -14,7 +14,7 @@ void defineUltrasonic() {
   pinMode(echoPin3, INPUT);
 }
 
-int mesafeOlcOn() {
+int distanceMeasureFront() {
   //ULTRASONİK
   digitalWriteFast(trigPin, LOW);
   delayMicroseconds(2);
@@ -39,7 +39,7 @@ int mesafeOlcOn() {
   return 0;
 }
 
-int mesafeOlcArka() {
+int distanceMeasureBack() {
   //ULTRASONİK
   digitalWrite(trigPin2, LOW);
   delayMicroseconds(2);
@@ -63,14 +63,14 @@ int mesafeOlcArka() {
   }
   return 0;
 }
-int mesafeOlcInis() {
+int distanceMeasureInside() {
   //ULTRASONİK
-  digitalWrite(trigPin3, LOW);
+  digitalWriteFast(trigPin3, LOW);
   delayMicroseconds(2);
   // Sets the trigPin on HIGH state for 10 micro seconds
-  digitalWrite(trigPin3, HIGH);
+  digitalWriteFast(trigPin3, HIGH);
   delayMicroseconds(10);
-  digitalWrite(trigPin3, LOW);
+  digitalWriteFast(trigPin3, LOW);
   // Reads the echoPin, returns the sound wave travel time in microseconds
   duration = pulseIn(echoPin3, HIGH);
   // Calculating the distance
