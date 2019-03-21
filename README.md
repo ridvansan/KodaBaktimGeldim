@@ -1,0 +1,1 @@
+# KODA BAKTIM GELDİ Mİ
