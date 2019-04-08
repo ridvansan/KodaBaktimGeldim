@@ -3,7 +3,8 @@
 #include <digitalWriteFast.h>   //Library for use digitalWrite and digitalRead methods much faster. 
                                 //For more info and download please visit: https://github.com/NicksonYap/digitalWriteFast 
 
-int step = 0;         //Step integer for hold the info of which step we are on at.
+int currentStep = 0; //Step integer for hold the info of which step we are on at.
+
 
 Servo frontServo;     //Creating servo objects
 Servo backServo;
@@ -20,9 +21,13 @@ void loop(){
   while(distanceMeasure('f')>13){
     
   }
-  stepUp();
-    
+  if (currentStep <3) {
+    stepUp();
+  }
+  while(true){
+  }
   
-   
-
+  
+  
+    
 }                                 

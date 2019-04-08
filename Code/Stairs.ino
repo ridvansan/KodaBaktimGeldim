@@ -10,7 +10,8 @@ void stepUp(){
   setMotors('b',100,100);
   delay(200);
   stopAllMotors();
-  setServo(frontServo,180); 
+  setServo(frontServo,180);
+  currentStep++;
 }
 
 void stepDown(){

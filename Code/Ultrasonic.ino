@@ -5,6 +5,8 @@
 #define trigPinInside  A12
 #define echoPinInside  A13
 
+
+
 //This method defines pins input for echo pins and output for trig pins of 3 ultrasonic sensors.
 void defineUltrasonic() {
   pinModeFast(trigPinFront, OUTPUT);
@@ -18,7 +20,7 @@ void defineUltrasonic() {
 }
 
 //This methods returns distance the one of the ultrasonic sensors sees.
-int distanceMeasure(char sensor) { //Takes parameter of sensor ('f' for front,'b' for back,'i' for inside)
+double distanceMeasure(char sensor) { //Takes parameter of sensor ('f' for front,'b' for back,'i' for inside)
   int trigPin;                     //Declaring the pins 
   int echoPin;
   int duration;

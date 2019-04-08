@@ -15,7 +15,7 @@ void setServo(Servo servo,int angle) {              //This mathod takes paramete
   if (initialAngle > angle) {                       //This if block check servos target angle and initial angle and compares them
     for (int i = initialAngle ; i >= angle; i--) {  //If target angle is bigger than initial this decreases servos angle one by one. 
       servo.write(i);
-      delay(15);
+      delay(10);
       
     }
 
@@ -23,7 +23,7 @@ void setServo(Servo servo,int angle) {              //This mathod takes paramete
   else {                                            //Basically the opposite of the if statement
     for (int i = initialAngle ; i < angle; i++) {
       servo.write(i);
-      delay(15);
+      delay(10);
     }
   }
   servo.write(angle);                               // Writing the target angle
