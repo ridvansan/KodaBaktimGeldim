@@ -1,5 +1,4 @@
 #include <Servo.h>              //Library for use Servo motors
-
 #include <digitalWriteFast.h>   //Library for use digitalWrite and digitalRead methods much faster. 
                                 //For more info and download please visit: https://github.com/NicksonYap/digitalWriteFast 
 
@@ -17,17 +16,48 @@ void setup() {
 
 
 void loop(){
-  setMotors('b',100,100);
-  while(distanceMeasure('f')>13){
-    
-  }
-  if (currentStep <3) {
+    while(currentStep < 4){
+      setMotors('b',255,255);
+      delay(300);
+      while(distanceMeasure('f')>11){
+        setMotors('b',255,255);
+    }
     stepUp();
-  }
-  while(true){
-  }
-  
-  
-  
+    }
+
+    setMotors('b',255,255);
+    delay(500);
+    turn(90);
+
     
+      while(distanceMeasure('f')>11){
+        setMotors('b',255,255);
+    }
+    stepUp();
+
+    setMotors('b',255,255);
+    delay(700);
+    stopMotors('b');
+    turn(180);
+
+    
+    while(distanceMeasure('b') < 9){    
+      setMotors('b',-250,-250);
+    }
+    stepDown();
+
+    turn(90);
+
+    while(currentStep <= 8){
+      
+    while(distanceMeasure('b') < 9){  
+      setMotors('b',-250,-250);  
+    }
+    stepDown();
+    }
+
+    while(true){
+      setMotors('b',-255,-255);
+      }
+
 }                                 

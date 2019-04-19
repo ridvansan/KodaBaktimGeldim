@@ -1,9 +1,9 @@
 #define trigPinFront   9
 #define echoPinFront   8
-#define trigPinBack    A7
-#define echoPinBack    A6
-#define trigPinInside  A12
-#define echoPinInside  A13
+#define trigPinBack    14
+#define echoPinBack    15
+#define trigPinInside  16
+#define echoPinInside  17
 
 
 
@@ -36,11 +36,11 @@ double distanceMeasure(char sensor) { //Takes parameter of sensor ('f' for front
     trigPin = trigPinInside;
     echoPin = echoPinInside;
   }
-  digitalWriteFast(trigPin, LOW);     //Default ultrasonic sensor usage but in here DigitalWriteFast library has used because of to get better performance
+  digitalWrite(trigPin, LOW);     //Default ultrasonic sensor usage but in here DigitalWriteFast library has used because of to get better performance
   delayMicroseconds(2);               //with faster writing speed.
-  digitalWriteFast(trigPin, HIGH);
+  digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
-  digitalWriteFast(trigPin, LOW);
+  digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH);  //Measures the come back duration of sound which is trig pin sent and writes it to duration as miliseconds. 
   return (duration * 0.034 / 2);      //Converts the duration to distance with multiply it with speed of sound at normal conditions and returns it. 
 }

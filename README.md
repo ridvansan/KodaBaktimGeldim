@@ -4,19 +4,17 @@ As we tried to climb stair in ITURO 2018 we confornt a problem due to Servo Moto
 
 Participants:
 
-    Rıdvan San
-    Akın Can Okyay
-    Cem Erciyas
-    Hüseyin Erbayraktar
+Rıdvan San
+Akın Can Okyay
+Cem Erciyas
+Hüseyin Erbayraktar
 ## Materials We Used    
     1 Arduino Mega 2560
     3 L298N Motor Driver
     3 HC-SR04 Ultrasonic Sensor
     2 Servo Motor
     6 DC Motor
+    6 Wheels
 ## Working Principle of Robot
-roborsajdka
+When robot start front servo down itself 90 degrees and back wheels works. When the robot's front wheels come to the step, front servo pull itself and back servo going down. After that with the help of tail wheels and front wheels robot moves on. After a delay back servo go up and front servo is making 90 degree again.
 
-## Code Explaining
-We preferred to use one function for one device. e.g. one Ultrasonic Sensor Method for all Ultrasonic Sensors.
-Thats why we divided the robot into parts. 
