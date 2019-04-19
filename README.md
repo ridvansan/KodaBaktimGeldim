@@ -4,9 +4,12 @@ As we tried to climb stair in ITURO 2018 we confornt a problem due to Servo Moto
 
 Participants:
 
-Rıdvan San\n
-Akın Can Okyay\n
-Cem Erciyas\n
+Rıdvan San
+
+Akın Can Okyay
+
+Cem Erciyas
+
 Hüseyin Erbayraktar
 ## Materials We Used    
     1 Arduino Mega 2560
